@@ -1,8 +1,10 @@
+import sys
+
 import requests
 from PyQt6.QtCore import QSize
-from PyQt6.QtWidgets import QApplication, QWidget, QPushButton, QMainWindow
+from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton
 
-import sys
+from midka.settings import INTERNAL_HOST
 
 
 class MainWindow(QMainWindow):
@@ -21,9 +23,7 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(self.button)
 
     def the_button_was_clicked(self):
-        response = requests.get(
-            url='https://62c9-95-56-128-231.ngrok.io/api/v1/roles/'
-        )
+        response = requests.get(url=f"{INTERNAL_HOST}/api/v1/roles/")
 
         front_text: str = "\n".join(
             [f"{x['id']} - {x['name1']}" for x in response.json()]

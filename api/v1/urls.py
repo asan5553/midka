@@ -1,4 +1,5 @@
 from rest_framework.routers import DefaultRouter
+
 from .classes.views import ClassViewSet
 from .lessons.views import LessonViewSet
 from .roles.views import RoleViewSet
@@ -18,7 +19,6 @@ router.register("staffs", StaffViewSet, basename="staffs")
 router.register("students", StudentViewSet, basename="students")
 router.register("weekdays", WeekdayViewSet, basename="weekdays")
 
-urlpatterns = [
-]
+urlpatterns = []
 
 urlpatterns += router.urls

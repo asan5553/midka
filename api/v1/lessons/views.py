@@ -1,8 +1,9 @@
 from rest_framework import viewsets
 from rest_framework.permissions import AllowAny
 
-from .serializer import LessonSerializer
 from core.models import Lesson
+
+from .serializer import LessonSerializer
 
 
 class LessonViewSet(viewsets.ReadOnlyModelViewSet):

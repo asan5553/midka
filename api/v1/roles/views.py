@@ -1,8 +1,9 @@
 from rest_framework import viewsets
 from rest_framework.permissions import AllowAny
 
-from .serializer import RoleSerializer
 from core.models import Role1
+
+from .serializer import RoleSerializer
 
 
 class RoleViewSet(viewsets.ReadOnlyModelViewSet):

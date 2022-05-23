@@ -1,9 +1,6 @@
 from django.contrib import admin
 
-from .models import (
-    Class, Lesson, Role1, Schedule, Staff, Section, Weekday1
-)
-
+from .models import Class, Lesson, Role1, Schedule, Section, Staff, Weekday1
 
 admin.site.register(Class)
 admin.site.register(Lesson)

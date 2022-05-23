@@ -1,8 +1,9 @@
 from rest_framework import viewsets
 from rest_framework.permissions import AllowAny
 
-from .serializer import StaffSerializer
 from core.models import Staff
+
+from .serializer import StaffSerializer
 
 
 class StaffViewSet(viewsets.ReadOnlyModelViewSet):

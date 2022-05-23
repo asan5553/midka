@@ -1,8 +1,9 @@
 from rest_framework import viewsets
 from rest_framework.permissions import AllowAny
 
-from .serializer import SectionSerializer
 from core.models import Section
+
+from .serializer import SectionSerializer
 
 
 class SectionViewSet(viewsets.ReadOnlyModelViewSet):
